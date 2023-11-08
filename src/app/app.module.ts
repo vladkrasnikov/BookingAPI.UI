@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SideBarMenuComponent } from './layout/side-bar-menu/side-bar-menu.component';
+import {AppLayoutModule} from "./layout/app-layout.module";
+import { CompanyListComponent } from './modules/company-list/company-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SideBarMenuComponent
+    CompanyListComponent,
   ],
   imports: [
-    BrowserModule,
+    AppLayoutModule,
     AppRoutingModule,
-    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
