@@ -1,0 +1,38 @@
+.brand-container {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+.brand-card {
+  width: 400px; /* Adjust the width as needed */
+  margin-right: 16px; /* Adjust the margin to control spacing between cards */
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mat-card-container {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mat-card-title {
+  font-size: 20px; /* Adjust the font size as needed */
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.mat-card-content {
+  margin-top: 8px;
+  overflow: auto;
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+}
