@@ -1,18 +1,3 @@
-<!--<div class="company-list">-->
-<!--  <div *ngFor="let company of _companyList">-->
-<!--    <a [routerLink]="['/company', company.id]">-->
-<!--      <div class="company-list-item">-->
-<!--&lt;!&ndash;        <div class="company-list-item__logo">&ndash;&gt;-->
-<!--&lt;!&ndash;          <img src="{{company.logo}}" alt="{{company.name}}">&ndash;&gt;-->
-<!--&lt;!&ndash;        </div>&ndash;&gt;-->
-<!--        <div class="company-list-item__name">-->
-<!--          {{company.name}}-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </a>-->
-<!--  </div>-->
-<!--</div>-->
-
 <mat-list *ngFor="let company of _companyList">
   <mat-list-item>
     <a [routerLink]="[company.id]">

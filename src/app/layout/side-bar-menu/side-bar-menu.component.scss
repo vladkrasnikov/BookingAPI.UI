@@ -15,3 +15,10 @@
   top: 0;
   z-index: 1;
 }
+
+.ng-content-container {
+  height: calc(100% - 64px);
+  overflow: auto;
+  padding: 16px;
+}
+

@@ -1,26 +1,28 @@
-
 <div class="brand-container">
-  <div *ngFor="let brand of company.brand" class="brand-card">
-    <div [style.height]="brand.showFullDescription ? 'auto' : '470px'">
-      <mat-card class="mat-card-container">
-        <mat-card-header>
-          <mat-card-title>{{ brand.name }}</mat-card-title>
-        </mat-card-header>
-        <!--      <img mat-card-image *ngIf="brand.image" [src]="brand.image" alt="Brand Photo">-->
-        <img mat-card-image
-             src="https://upload.wikimedia.org/wikipedia/commons/3/3a/M%C3%BCnster%2C_LVM%2C_B%C3%BCrogeb%C3%A4ude_--_2013_--_5149-51.jpg"
-             alt="Brand Photo">
-        <mat-card-content>
-          <p *ngIf="!brand.showFullDescription">{{ brand.description | slice:0:100 }}...</p>
-          <p *ngIf="brand.showFullDescription">{{ brand.description }}</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button color="primary" *ngIf="brand.description.length > 100"
-                  (click)="toggleDescription(brand)">
-            {{ brand.showFullDescription ? 'Less' : 'More' }}
-          </button>
-        </mat-card-actions>
-      </mat-card>
+  <div class="brand-card-wrapper">
+
+    <div *ngFor="let brand of company.brand" class="brand-card">
+      <div [style.height]="brand.showFullDescription ? 'auto' : '470px'">
+        <mat-card class="mat-card-container">
+          <mat-card-header>
+            <mat-card-title>{{ brand.name }}</mat-card-title>
+          </mat-card-header>
+          <!--      <img mat-card-image *ngIf="brand.image" [src]="brand.image" alt="Brand Photo">-->
+          <img mat-card-image
+               src="https://upload.wikimedia.org/wikipedia/commons/3/3a/M%C3%BCnster%2C_LVM%2C_B%C3%BCrogeb%C3%A4ude_--_2013_--_5149-51.jpg"
+               alt="Brand Photo">
+          <mat-card-content>
+            <p *ngIf="!brand.showFullDescription">{{ brand.description | slice:0:100 }}...</p>
+            <p *ngIf="brand.showFullDescription">{{ brand.description }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="primary" *ngIf="brand.description.length > 100"
+                    (click)="toggleDescription(brand)">
+              {{ brand.showFullDescription ? 'Less' : 'More' }}
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
     </div>
   </div>
 </div>
